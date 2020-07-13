@@ -1,0 +1,15 @@
+{
+  "name": "recife-mongoose",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "recife start",
+    "server": "recife server",
+    "build": "recife build"
+  },
+  "dependencies": {
+    "recife": "^0.7.0",
+    "typescript": "^3.*",
+    "recife-express": "^0.1.0"
+  }
+}
