@@ -8,8 +8,12 @@
     "build": "recife build"
   },
   "dependencies": {
+    "mongoose": "^5.9.24",
     "recife": "^0.7.0",
-    "typescript": "^3.*",
-    "recife-express": "^0.1.0"
+    "recife-express": "^0.1.0",
+    "typescript": "^3.*"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.7.31"
   }
 }

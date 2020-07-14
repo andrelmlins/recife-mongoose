@@ -1,4 +1,5 @@
-import { IServer } from 'recife';
+import { IServer } from "recife";
+import mongoose from "mongoose";
 
 class Server implements IServer {
   beforeStarted() {
@@ -14,7 +15,11 @@ class Server implements IServer {
   }
 
   mounted() {
-    //
+    mongoose.connect("mongodb://localhost:27017/recife-mongoose", {
+      // useCreateIndex: true,
+      // useUnifiedTopology: true,
+      useNewUrlParser: true
+    });
   }
 
   beforeUpdated() {
@@ -25,8 +30,8 @@ class Server implements IServer {
     //
   }
 
-  catch() {
-    //
+  catch(e) {
+    console.log(e);
   }
 }
 

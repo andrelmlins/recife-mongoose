@@ -1,16 +1,18 @@
-import { Type } from 'recife';
-import AddressModel from './AddressModel';
+import { Type } from "recife";
+import { Document, Schema, model } from "mongoose";
+// import AddressModel from "./AddressModel";
 
-@Type()
-class UserModel {
+// @Type()
+export class UserModel extends Document {
   name?: string;
   email?: string;
   username?: string;
-  address?: AddressModel;
-
-  static getAddress(user: UserModel) {
-    return user.address;
-  }
 }
 
-export default UserModel;
+const UserSchema: Schema = new Schema({
+  name: String,
+  email: String,
+  username: String
+});
+
+export default model<UserModel>("User", UserSchema);
