@@ -2,8 +2,9 @@ import { Type } from "recife";
 import { Document, Schema, model } from "mongoose";
 // import AddressModel from "./AddressModel";
 
-// @Type()
+@Type()
 export class UserModel extends Document {
+  id: string;
   name?: string;
   email?: string;
   username?: string;
